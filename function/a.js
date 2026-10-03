@@ -136,6 +136,11 @@ var x = 10;
 const user = {
     name : "Gautam"
 };
+
+/* user = {
+    name : "Golu"       // ye error hai quki reassign nhi kar sakta hai 
+}; */
+
 user.name = "Rahul"
 console.log(user.name);
 
