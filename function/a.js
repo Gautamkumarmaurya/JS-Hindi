@@ -145,10 +145,100 @@ var x = 10;
 // console.log(user.name);
 
 //======================= Const Array ====================
-
+/* 
 const number = [1,2,3,4,5];
 number.push(6);
 console.log(number);
+
+ */
+/* 
+const number = [1,3,4];         
+number = [4,5,6];               // ye error hai quki reassign nhi kar sakte hai
+console.log(number);
+
+ */
+
+//================== Real Project Example =======================
+/* 
+const product = {
+    id : 1,
+    name : "iPhone 18",
+    price : 999999
+};
+
+const id = product.id;
+const name = product.name;
+const price = product.price;
+
+console.log([id, name, price]);
+console.log([product.id, product.name, product.price]);
+
+const result = [product.id, product.name,  product.price];
+console.log(result);
+
+const {id1, name1, price1 } = product;
+console.log(id);
+console.log(name);
+console.log(price);
+
+console.log([product.id, product.name, product.price]);     // it is print of Array 
+
+ */
+
+// ========================== Coding Pratice =======================
+/* 
+var a = 10;
+{
+    var a = 20;    
+}
+console.log(a);
+
+
+let a = 10;
+{
+    let a = 20;
+}
+console.log(a);
+
+const  b = 40;
+{
+    const b = 30;
+}
+console.log(b);
+ */
+
+// var a = 10;
+// var a = 20;
+
+// console.log(a);
+
+
+// let a = 10;          it is a error because of same variable name two times declare in this program
+// let a = 20;
+//  console.log(a);
+ 
+/* const user = {
+    name : "Gautam"
+};
+user.name = "Golu";
+console.log(user.name);
+ */
+
+// for (let i = 0; i < 3; i++) {
+//     console.log(i);
+// }
+// console.log(i);
+
+/* const cart = [];
+cart.push("iphone");
+console.log(cart);
+ */
+
+let name = "Gautam";
+let age = 25;
+let isDeveloper = true;
+
+console.log(isDeveloper);
 
 
 
