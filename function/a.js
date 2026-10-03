@@ -133,16 +133,23 @@ var x = 10;
 
  */
 
-const user = {
-    name : "Gautam"
-};
+// const user = {
+//     name : "Gautam"
+// };
 
 /* user = {
     name : "Golu"       // ye error hai quki reassign nhi kar sakta hai 
 }; */
 
-user.name = "Rahul"
-console.log(user.name);
+// user.name = "Rahul"
+// console.log(user.name);
+
+//======================= Const Array ====================
+
+const number = [1,2,3,4,5];
+number.push(6);
+console.log(number);
+
 
 
 
