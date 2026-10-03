@@ -1,0 +1,526 @@
+/* ================================
+   Global Reset
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   Body
+================================ */
+
+body {
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(99, 102, 241, 0.25),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(14, 165, 233, 0.22),
+            transparent 35%
+        ),
+        #0f172a;
+
+    color: #172033;
+}
+
+
+/* ================================
+   Main Container
+================================ */
+
+.page-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* ================================
+   BMI Card
+================================ */
+
+.bmi-card {
+    width: 100%;
+    max-width: 480px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    border-radius: 24px;
+
+    padding: 32px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.25),
+        0 10px 25px rgba(0, 0, 0, 0.12);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* ================================
+   Header
+================================ */
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    margin-bottom: 30px;
+}
+
+
+.icon-box {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    font-size: 27px;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #8b5cf6
+    );
+
+    box-shadow:
+        0 8px 20px rgba(99, 102, 241, 0.35);
+}
+
+
+.card-header h1 {
+    font-size: 27px;
+    font-weight: 800;
+
+    color: #111827;
+
+    margin-bottom: 5px;
+}
+
+
+.card-header p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ================================
+   Form
+================================ */
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+
+/* ================================
+   Input Group
+================================ */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #374151;
+}
+
+
+.input-group label span {
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+
+/* ================================
+   Input Wrapper
+================================ */
+
+.input-wrapper {
+    position: relative;
+}
+
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 55px;
+
+    border: 1.5px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 0 65px 0 16px;
+
+    outline: none;
+
+    font-size: 15px;
+    font-family: inherit;
+
+    color: #111827;
+
+    background: #f9fafb;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.input-wrapper input::placeholder {
+    color: #9ca3af;
+}
+
+
+.input-wrapper input:focus {
+    background: #ffffff;
+
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+
+/* Remove number arrows */
+
+.input-wrapper input::-webkit-inner-spin-button,
+.input-wrapper input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* ================================
+   Input Unit
+================================ */
+
+.input-unit {
+    position: absolute;
+
+    right: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #6366f1;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    background: #eef2ff;
+
+    padding: 5px 8px;
+
+    border-radius: 6px;
+}
+
+
+/* ================================
+   Calculate Button
+================================ */
+
+.calculate-btn {
+    width: 100%;
+    height: 55px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 4px;
+
+    box-shadow:
+        0 10px 20px rgba(99, 102, 241, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 28px rgba(99, 102, 241, 0.35);
+}
+
+
+.calculate-btn:active {
+    transform: translateY(0);
+}
+
+
+.arrow {
+    font-size: 20px;
+
+    transition: transform 0.2s ease;
+}
+
+
+.calculate-btn:hover .arrow {
+    transform: translateX(4px);
+}
+
+
+/* ================================
+   Result Box
+================================ */
+
+.result-box {
+    margin-top: 25px;
+
+    padding: 22px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f5f3ff
+        );
+
+    border: 1px solid #e0e7ff;
+}
+
+
+.result-label {
+    color: #6b7280;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+}
+
+
+.result-box h2 {
+    font-size: 42px;
+
+    margin: 5px 0;
+
+    font-weight: 800;
+
+    color: #4f46e5;
+}
+
+
+.result-status {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   BMI Guide
+================================ */
+
+.guide-section {
+    margin-top: 28px;
+}
+
+
+.guide-section h3 {
+    font-size: 18px;
+
+    color: #111827;
+
+    margin-bottom: 16px;
+}
+
+
+/* ================================
+   Guide List
+================================ */
+
+.guide-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.guide-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background: #f9fafb;
+
+    border: 1px solid #f1f5f9;
+}
+
+
+.guide-dot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+
+.underweight {
+    background: #f59e0b;
+}
+
+
+.normal {
+    background: #22c55e;
+}
+
+
+.overweight {
+    background: #ef4444;
+}
+
+
+.guide-item div {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+
+    gap: 15px;
+}
+
+
+.guide-item strong {
+    font-size: 13px;
+
+    color: #374151;
+}
+
+
+.guide-item span:last-child {
+    font-size: 13px;
+
+    color: #6b7280;
+}
+
+
+/* ================================
+   Footer
+================================ */
+
+.card-footer {
+    margin-top: 24px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #e5e7eb;
+
+    text-align: center;
+}
+
+
+.card-footer p {
+    color: #9ca3af;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* ================================
+   Responsive Design
+================================ */
+
+@media (max-width: 520px) {
+
+    .page-container {
+        padding: 20px 14px;
+    }
+
+
+    .bmi-card {
+        padding: 24px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .card-header h1 {
+        font-size: 23px;
+    }
+
+
+    .icon-box {
+        width: 50px;
+        height: 50px;
+
+        font-size: 23px;
+    }
+
+
+    .guide-item div {
+        flex-direction: column;
+
+        gap: 3px;
+    }
+
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Checkout - ShopZone</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <h2>ShopZone</h2>
+
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="./cart.html">
+                Cart
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= CHECKOUT ================= -->
+
+    <main class="checkout-page">
+
+        <h1>Checkout</h1>
+
+
+        <!-- Product Summary -->
+
+        <section class="checkout-product">
+
+            <h2>Product Summary</h2>
+
+            <div id="checkoutProduct">
+
+                <!-- Product JavaScript se ayega -->
+
+            </div>
+
+        </section>
+
+
+        <!-- Customer Details -->
+
+        <section class="checkout-form">
+
+            <h2>Delivery Details</h2>
+
+
+            <form id="checkoutForm">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="address">
+                        Address
+                    </label>
+
+                    <textarea
+                        id="address"
+                        placeholder="Enter your address"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter phone number"
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn buy-now"
+                >
+                    Place Order
+                </button>
+
+
+                <p id="orderMessage"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="../js/checkout.js"
+    ></script>
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BMI Calculator</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <main class="page-container">
+
+        <section class="bmi-card">
+
+            <!-- Header -->
+            <div class="card-header">
+                <div class="icon-box">⚖️</div>
+
+                <div>
+                    <h1>BMI Calculator</h1>
+                    <p>Calculate your Body Mass Index</p>
+                </div>
+            </div>
+
+
+            <!-- Calculator Form -->
+            <div class="calculator-form">
+
+                <!-- Height -->
+                <div class="input-group">
+                    <label for="height">
+                        Height
+                        <span>(cm)</span>
+                    </label>
+
+                    <div class="input-wrapper">
+                        <input
+                            type="number"
+                            id="height"
+                            placeholder="Enter your height"
+                            min="1"
+                        >
+                        <span class="input-unit">cm</span>
+                    </div>
+                </div>
+
+
+                <!-- Weight -->
+                <div class="input-group">
+                    <label for="weight">
+                        Weight
+                        <span>(kg)</span>
+                    </label>
+
+                    <div class="input-wrapper">
+                        <input
+                            type="number"
+                            id="weight"
+                            placeholder="Enter your weight"
+                            min="1"
+                        >
+                        <span class="input-unit">kg</span>
+                    </div>
+                </div>
+
+
+                <!-- Calculate Button -->
+                <button class="calculate-btn" type="button">
+                    <span>Calculate BMI</span>
+                    <span class="arrow">→</span>
+                </button>
+
+            </div>
+
+
+            <!-- Result -->
+            <div class="result-box">
+                <p class="result-label">Your BMI</p>
+
+                <h2>--</h2>
+
+                <p class="result-status">
+                    Enter your details to calculate
+                </p>
+            </div>
+
+
+            <!-- BMI Guide -->
+            <div class="guide-section">
+
+                <h3>BMI Weight Guide</h3>
+
+                <div class="guide-list">
+
+                    <div class="guide-item">
+                        <span class="guide-dot underweight"></span>
+
+                        <div>
+                            <strong>Underweight</strong>
+                            <span>Less than 18.6</span>
+                        </div>
+                    </div>
+
+
+                    <div class="guide-item">
+                        <span class="guide-dot normal"></span>
+
+                        <div>
+                            <strong>Normal Range</strong>
+                            <span>18.6 – 24.9</span>
+                        </div>
+                    </div>
+
+
+                    <div class="guide-item">
+                        <span class="guide-dot overweight"></span>
+
+                        <div>
+                            <strong>Overweight</strong>
+                            <span>Greater than 24.9</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer -->
+            <div class="card-footer">
+                <p>
+                    BMI is a general health screening measurement.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+<script src="javascript.js"></script>
+</html>
